@@ -13,10 +13,14 @@
     "axios": "^1.7.3",
     "flowbite": "^2.4.1",
     "nuxt": "^3.12.4",
+    "pinia": "^2.2.1",
     "sass": "^1.77.8",
     "vue": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

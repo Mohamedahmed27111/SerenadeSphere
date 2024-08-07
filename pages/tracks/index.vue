@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="topAlbums p-6">
-          <h1 class="text-white text-5xl font-bold mb-5">Top Albums </h1>
+        <div class="topTracks p-6">
+          <h1 class="text-white text-5xl font-bold mb-5">Top Tracks </h1>
           <div class="flex gap-3 mb-5">
             <button @click="ascend()" class="bg-P-2 py-2 px-3 rounded  text-white">ascend</button>
 
@@ -13,7 +13,7 @@
         <div v-for="T in track" :key="T" >
           <div class="card bg-B-2 text-center rounded h-full flex flex-col justify-between items-center px-5 py-7">
             <div class="album-img rounded">
-              <img src="/assets/imgs/TheWeeknd/third.webp" alt="" class="p-1">
+              <img :src="Artist.imgThird" alt="" class="p-1">
             </div>
             <div class="album-body">
               <h2 class="text-G font-bold text-lg">{{ T.name }}</h2>
@@ -31,11 +31,17 @@
 
 import { ref } from 'vue'
 import axios from 'axios';
+import { useArtistURL } from '~/stores/artist';
+
+
+const Artist = useArtistURL()
+
+
 
 
 const track = ref(null)
 
-axios.get('https://ws.audioscrobbler.com/2.0/?method=artist.getTopTracks&artist=The+Weeknd&api_key=bf7b6cd9aab2d42882e143f93a094948&format=json')
+axios.get(`https://ws.audioscrobbler.com/2.0/?method=artist.getTopTracks&artist=${Artist.Artist}&api_key=bf7b6cd9aab2d42882e143f93a094948&format=json`)
     .then(function (response) {
   
       track.value = response.data.toptracks.track

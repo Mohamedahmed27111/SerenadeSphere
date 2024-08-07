@@ -13,7 +13,7 @@
         <div v-for="A in album" :key="A" >
           <div class="card bg-B-2 text-center rounded h-full flex flex-col justify-between items-center px-5 py-7">
             <div class="album-img rounded">
-              <img src="/assets/imgs/TheWeeknd/sec.webp" alt="" class="p-1">
+              <img :src="Artist.imgSec" alt="" class="p-1">
             </div>
             <div class="album-body">
               <h2 class="text-G font-bold text-lg">{{ A.name }}</h2>
@@ -28,14 +28,16 @@
 </template>
 
 <script setup>
-
 import { ref } from 'vue'
 import axios from 'axios';
+import { useArtistURL } from '~/stores/artist';
+const Artist = useArtistURL()
+
 
 
 const album = ref(null)
 
- axios.get('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+Weeknd&api_key=bf7b6cd9aab2d42882e143f93a094948&format=json')
+ axios.get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${Artist.Artist}&api_key=bf7b6cd9aab2d42882e143f93a094948&format=json`)
     .then(function (response) {
   
       album.value = response.data.topalbums.album
