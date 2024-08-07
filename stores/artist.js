@@ -22,5 +22,14 @@ export const useArtistURL = defineStore('ArtistURL',{
       artistThirdimg(newThirdimg){
         this.imgThird=newThirdimg
       },
-    }
+    },
+    persist: {
+        enabled: true,
+        strategies: [
+          {
+            key: 'user',
+            storage: process.client ? localStorage : undefined
+          }
+        ]
+      }
 })
