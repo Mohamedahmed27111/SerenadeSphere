@@ -3,9 +3,9 @@
         <div class="topTracks p-6">
           <h1 class="text-white text-5xl font-bold mb-5">Top Tracks </h1>
           <div class="flex gap-3 mb-5">
-            <button @click="ascend()" class="bg-P-2 py-2 px-3 rounded  text-white">ascend</button>
+            <button @click="ascend()" class="bg-P-2 py-2 px-3 rounded  text-white">Ascend</button>
 
-          <button @click="descend()" class="bg-P-2 py-2 px-3 rounded text-white">descend</button>
+          <button @click="descend()" class="bg-P-2 py-2 px-3 rounded text-white">Descend</button>
           
         </div>
           <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols- gap-4">
@@ -17,7 +17,7 @@
             </div>
             <div class="album-body">
               <h2 class="text-G font-bold text-lg">{{ T.name }}</h2>
-              <h2 class="text-P-2 font-bold text-sm"> playcount: {{ T.playcount }}</h2>
+              <h2 class="text-P-2 font-bold text-sm"> playcount: {{formatNumber( T.playcount ) }}</h2>
             </div>
           </div>
   
@@ -61,4 +61,14 @@ axios.get(`https://ws.audioscrobbler.com/2.0/?method=artist.getTopTracks&artist=
      function ascend(){
         track.value.sort((a,b) => b.playcount - a.playcount )
      }
+
+
+     function formatNumber(num) {
+  if (num >= 1000000) {
+    return (num / 1000000).toFixed(1) + 'M';
+  } else if (num >= 1000) {
+    return (num / 1000).toFixed(1) + 'K';
+  }
+  return num.toString();
+}
 </script>
