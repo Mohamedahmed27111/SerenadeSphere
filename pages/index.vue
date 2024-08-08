@@ -79,6 +79,44 @@
                     </div>
                   </NuxtLink>
                     
+                  <NuxtLink to="/artist" >
+                      <div @click="sza" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
+                         <img src="/sza/main.webp" alt="" class="w-full   ">
+                      </div>
+                      <div class="main-body ml-4">
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">SZA</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
+                      </div>
+                    </div>
+                  </NuxtLink>
+
+                  <NuxtLink to="/artist" >
+                      <div @click="ye" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
+                         <img src="/ye/main.webp" alt="" class="w-full   ">
+                      </div>
+                      <div class="main-body ml-4">
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Kanye West</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
+                      </div>
+                    </div>
+                  </NuxtLink>
+
+
+
+                  <NuxtLink to="/artist" >
+                      <div @click="clairo" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
+                         <img src="/Clairo/main.webp" alt="" class="w-full   ">
+                      </div>
+                      <div class="main-body ml-4">
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Clairo</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
+                      </div>
+                    </div>
+                  </NuxtLink>
+                    
         </div>
     </div>
 </template>
@@ -125,6 +163,24 @@ const Billie =() =>{
     ArtistUrl.artistMainimg('/Billie/main.webp')
     ArtistUrl.artistSecimg('/Billie/sec.webp')
     ArtistUrl.artistThirdimg('/Billie/third.webp')
+  }
+const sza =() =>{
+    ArtistUrl.artistName('SZA')
+    ArtistUrl.artistMainimg('/sza/main.webp')
+    ArtistUrl.artistSecimg('/sza/sec.webp')
+    ArtistUrl.artistThirdimg('/sza/third.webp')
+  }
+const ye =() =>{
+    ArtistUrl.artistName('Kanye+West')
+    ArtistUrl.artistMainimg('/ye/main.webp')
+    ArtistUrl.artistSecimg('/ye/sec.webp')
+    ArtistUrl.artistThirdimg('/ye/third.webp')
+  }
+const clairo =() =>{
+    ArtistUrl.artistName('Clairo')
+    ArtistUrl.artistMainimg('/Clairo/main.webp')
+    ArtistUrl.artistSecimg('/Clairo/sec.webp')
+    ArtistUrl.artistThirdimg('/Clairo/third.webp')
   }
 
 
