@@ -5,7 +5,7 @@
         <nav class="bg-B-1 ">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-3xl sm:text-5xl text-P-1 font-bold whitespace-nowrap dark:text-white  *:">SerenadeSphere</span>
+        <span class="self-center text-xl sm:text-5xl text-P-1 font-bold whitespace-nowrap dark:text-white  *:">SerenadeSphere</span>
     </NuxtLink>
    
     <div class="   md:block md:w-auto" id="navbar-default">
