@@ -1,65 +1,65 @@
 <template>
     <div>
       
-        <div class="container m-auto grid grid-cols-3 gap-6" >
+        <div class="container px-8 m-auto grid lg:grid-cols-3 md:grid-cols-2 gap-6" >
                       <NuxtLink to="/artist" >
-                      <div @click="TheWeeknd" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
+                      <div @click="TheWeeknd" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
                          <img src="/assets/imgs/TheWeeknd/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">The Weeknd</h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">The Weeknd</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
                   
                   <NuxtLink to="/artist" >
-                      <div @click="TravisScott" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
+                      <div @click="TravisScott" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
                          <img src="/assets/imgs/Travis/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">Travis Scott</h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Travis Scott</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
 
                   <NuxtLink to="/artist" >
-                      <div @click="LanaDelRey" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
+                      <div @click="LanaDelRey" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
                          <img src="/assets/imgs/LanaDelRey/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">LanaDelRey</h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Lana Del Rey</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
 
 
                   <NuxtLink to="/artist" >
-                      <div @click="Metro" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
+                      <div @click="Metro" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
                          <img src="/assets/imgs/metro/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">Metro Boomin </h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Metro Boomin </h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
 
 
                   <NuxtLink to="/artist" >
-                      <div @click="Future" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
-                         <img src="/assets/imgs/Future/main.webp" alt="" class="w-full   ">
+                      <div @click="Future" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center   overflow-hidden ">
+                         <img src="/assets/imgs/Future/main.webp " alt="" class="w-full  object-top ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">Future</h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Future</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
@@ -68,13 +68,13 @@
 
 
                   <NuxtLink to="/artist" >
-                      <div @click="Billie" class="main-card card rounded  flex items-center justify-start mt-11 h-40 bg-G ">
-                      <div class="main-img w-[38%] h-full flex items-center p-4   ">
+                      <div @click="Billie" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
+                      <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
                          <img src="/assets/imgs/Billie/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
-                         <h1 class="text-P-2 font-extrabold text-lg">Billie Eilish</h1>
-                         <p class="text-B-2 font-bold">About</p>
+                         <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Billie Eilish</h1>
+                         <p class="text-B-2 font-bold opacity-80">About</p>
                       </div>
                     </div>
                   </NuxtLink>
@@ -84,6 +84,8 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue'
+
 import { useArtistURL } from '~/stores/artist';
 const ArtistUrl = useArtistURL()
 
@@ -124,5 +126,9 @@ const Billie =() =>{
     ArtistUrl.artistSecimg('/_nuxt/assets/imgs/Billie/sec.webp')
     ArtistUrl.artistThirdimg('/_nuxt/assets/imgs/Billie/third.webp')
   }
+
+
+
+
 
 </script>

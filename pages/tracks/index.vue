@@ -45,7 +45,6 @@ axios.get(`https://ws.audioscrobbler.com/2.0/?method=artist.getTopTracks&artist=
     .then(function (response) {
   
       track.value = response.data.toptracks.track
-      console.log(response.data.toptracks.track);
     })
     .catch(function (error) {
       // handle error

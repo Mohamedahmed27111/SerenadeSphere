@@ -1,9 +1,9 @@
 <template>
     <div class="container m-auto">
-      <div class="card bg-G">
-        <div class="artist-hero flex mb-5">
-          <div class="artist-img w-2/4">
-            <img :src="Artist.imgMain" alt="" class="p-5 shadow rounded ">
+      <div class="card bg-G rounded">
+        <div class="artist-hero flex items-center mb-5">
+          <div class="artist-img w-2/4 flex items-center">
+            <img :src="Artist.imgMain" alt="" class="p-5 shadow rounded-md ">
           </div>
           <div class="artist-body p-10">
             <a :href="Link" target="_blank">
@@ -57,7 +57,6 @@
   
   axios.get(url)
     .then(function (response) {
-  console.log(response.data)
       artist.value = response.data.artist
       name.value = response.data.artist.name
       Link.value = response.data.artist.url

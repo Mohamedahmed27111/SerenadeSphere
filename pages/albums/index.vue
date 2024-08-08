@@ -41,7 +41,6 @@ const album = ref(null)
     .then(function (response) {
   
       album.value = response.data.topalbums.album
-      console.log(response.data.topalbums.album);
   
     
       
