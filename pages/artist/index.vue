@@ -1,26 +1,26 @@
 <template>
-    <div class="container m-auto">
+    <div class="container m-auto px-5">
       <div class="card bg-G rounded">
-        <div class="artist-hero flex items-center mb-5">
-          <div class="artist-img w-2/4 flex items-center">
-            <img :src="Artist.imgMain" alt="" class="p-5 shadow rounded-md ">
+        <div class="artist-hero flex  mb-5 flex-col lg:flex-row ">
+          <div class="artist-img  flex items-center lg:w-2/4 ">
+            <img :src="Artist.imgMain" alt="artist" class=" shadow rounded-md p-5 ">
           </div>
-          <div class="artist-body p-10">
+          <div class="artist-body p-5 ">
             <a :href="Link" target="_blank">
-              <h1 class="text-white text-5xl font-bold hover:text-B-2 duration-200">{{ name }} </h1>
+              <h1 class="text-white   font-bold hover:text-B-2 duration-200 text-center text-3xl sm:text-4xl md:text-5xl lg:text-left ">{{ name }} </h1>
             </a>
-            <ul class="text-xl font-semibold my-5 flex gap-6 justify-between items-center uppercase text-P-2">
+            <ul class="font-semibold my-5 flex  justify-between items-center uppercase text-P-2  flex-col gap-2  md:text-lg lg:flex-row lg:gap-6  ">
               <li>
-                <h2>listeners: {{statsL}}</h2>
+                <h2>listeners: <span>{{statsL}}</span></h2>
               </li>
               <li>
-                <h2>playcount: {{ statsP }}</h2>
+                <h2>playcount: <span>{{ statsP }}</span></h2>
               </li>
             </ul>
 
-           <div class="flex flex-col mt-20 gap-24">
+           <div class="flex lg:flex-col lg:justify-start   mt-20 gap-5 justify-center sm:gap-10 lg:gap-24">
             <NuxtLink to="/albums/" ><h1 class="artist"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>Top Albums</h1>  </NuxtLink>
-           <NuxtLink to="/tracks/">  <h1 class="artist"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>Top Tracks</h1>  </NuxtLink>
+            <NuxtLink to="/tracks/">  <h1 class="artist"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>Top Tracks</h1>  </NuxtLink>
           </div>
   
           </div>
@@ -81,4 +81,8 @@
   
   </script>
   
-  <style scoped></style>
+  <style scoped>
+span{
+  @apply text-B-2
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
     <div>
       
-        <div class="container px-8 m-auto grid lg:grid-cols-3 md:grid-cols-2 gap-6" >
+        <div class="container px-8 m-auto grid xl:grid-cols-3 md:grid-cols-2 gap-6" >
                       <NuxtLink to="/artist" >
                       <div @click="TheWeeknd" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">

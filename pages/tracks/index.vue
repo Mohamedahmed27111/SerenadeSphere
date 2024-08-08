@@ -8,7 +8,7 @@
           <button @click="descend()" class="bg-P-2 py-2 px-3 rounded text-white">descend</button>
           
         </div>
-          <div class="grid grid-cols-4 gap-4">
+          <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols- gap-4">
             <!-- V-FOR Album -->
         <div v-for="T in track" :key="T" >
           <div class="card bg-B-2 text-center rounded h-full flex flex-col justify-between items-center px-5 py-7">

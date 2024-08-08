@@ -31,7 +31,9 @@ img{
 
 
 .artist{
-    @apply flex items-center gap-2 text-5xl text-P-2 font-bold mt-4 mb-20 hover:text-P-1 duration-200 cursor-pointer
+    @apply w-full flex items-center gap-2  text-P-2 font-bold mt-4 lg:mb-20 mb-5 hover:text-P-1 duration-200 cursor-pointer xl:text-5xl md:text-4xl sm:text-2xl md:justify-start  text-lg 
+    
+    ;
 }
 
 

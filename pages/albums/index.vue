@@ -8,7 +8,7 @@
           <button @click="descend()" class="bg-P-2 py-2 px-3 rounded text-white">descend</button>
           
         </div>
-          <div class="grid grid-cols-4 gap-4">
+          <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
             <!-- V-FOR Album -->
         <div v-for="A in album" :key="A" >
           <div class="card bg-B-2 text-center rounded h-full flex flex-col justify-between items-center px-5 py-7">
@@ -16,7 +16,7 @@
               <img :src="Artist.imgSec" alt="" class="p-1">
             </div>
             <div class="album-body">
-              <h2 class="text-G font-bold text-lg">{{ A.name }}</h2>
+              <h2 class="text-G font-bold text-sm">{{ A.name }}</h2>
               <h2 class="text-P-2 font-bold text-sm"> playcount: {{ A.playcount }}</h2>
             </div>
           </div>
