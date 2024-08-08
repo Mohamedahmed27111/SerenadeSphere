@@ -17,7 +17,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="TravisScott" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
-                         <img src="/Travis/main.webp" alt="" class="w-full   ">
+                         <img src="/travis/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Travis Scott</h1>
