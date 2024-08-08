@@ -5,7 +5,7 @@
                       <NuxtLink to="/artist" >
                       <div @click="TheWeeknd" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
-                         <img src="/public/TheWeeknd/main.webp" alt="" class="w-full   ">
+                         <img src="/TheWeeknd/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">The Weeknd</h1>
@@ -17,7 +17,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="TravisScott" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
-                         <img src="/public/Travis/main.webp" alt="" class="w-full   ">
+                         <img src="/Travis/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Travis Scott</h1>
@@ -29,7 +29,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="LanaDelRey" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
-                         <img src="/public/LanaDelRey/main.webp" alt="" class="w-full   ">
+                         <img src="/LanaDelRey/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Lana Del Rey</h1>
@@ -42,7 +42,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Metro" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
-                         <img src="/public/metro/main.webp" alt="" class="w-full   ">
+                         <img src="/metro/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Metro Boomin </h1>
@@ -55,7 +55,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Future" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center   overflow-hidden ">
-                         <img src="/public/Future/main.webp " alt="" class="w-full  object-top ">
+                         <img src="/Future/main.webp " alt="" class="w-full  object-top ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Future</h1>
@@ -70,7 +70,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Billie" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
-                         <img src="/public/Billie/main.webp" alt="" class="w-full   ">
+                         <img src="/Billie/main.webp" alt="" class="w-full   ">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Billie Eilish</h1>
@@ -92,39 +92,39 @@ const ArtistUrl = useArtistURL()
 
 const TravisScott =() =>{
     ArtistUrl.artistName('Travi$+Scott')
-    ArtistUrl.artistMainimg('/_nuxt/public/travis/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/travis/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/travis/third.webp')
+    ArtistUrl.artistMainimg('/travis/main.webp')
+    ArtistUrl.artistSecimg('/travis/sec.webp')
+    ArtistUrl.artistThirdimg('/travis/third.webp')
   }
 const TheWeeknd =() =>{
     ArtistUrl.artistName('The+Weeknd')
-    ArtistUrl.artistMainimg('/_nuxt/public/TheWeeknd/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/TheWeeknd/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/TheWeeknd/third.webp')
+    ArtistUrl.artistMainimg('/TheWeeknd/main.webp')
+    ArtistUrl.artistSecimg('/TheWeeknd/sec.webp')
+    ArtistUrl.artistThirdimg('/TheWeeknd/third.webp')
   }
 const LanaDelRey =() =>{
     ArtistUrl.artistName('Lana+Del+Rey')
-    ArtistUrl.artistMainimg('/_nuxt/public/LanaDelRey/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/LanaDelRey/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/LanaDelRey/third.webp')
+    ArtistUrl.artistMainimg('/LanaDelRey/main.webp')
+    ArtistUrl.artistSecimg('/LanaDelRey/sec.webp')
+    ArtistUrl.artistThirdimg('/LanaDelRey/third.webp')
   }
 const Metro =() =>{
     ArtistUrl.artistName('Metro+Boomin')
-    ArtistUrl.artistMainimg('/_nuxt/public/metro/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/metro/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/metro/third.webp')
+    ArtistUrl.artistMainimg('/metro/main.webp')
+    ArtistUrl.artistSecimg('/metro/sec.webp')
+    ArtistUrl.artistThirdimg('/metro/third.webp')
   }
 const Future =() =>{
     ArtistUrl.artistName('Future')
-    ArtistUrl.artistMainimg('/_nuxt/public/Future/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/Future/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/Future/third.webp')
+    ArtistUrl.artistMainimg('/Future/main.webp')
+    ArtistUrl.artistSecimg('/Future/sec.webp')
+    ArtistUrl.artistThirdimg('/Future/third.webp')
   }
 const Billie =() =>{
     ArtistUrl.artistName('Billie+Eilish')
-    ArtistUrl.artistMainimg('/_nuxt/public/Billie/main.webp')
-    ArtistUrl.artistSecimg('/_nuxt/public/Billie/sec.webp')
-    ArtistUrl.artistThirdimg('/_nuxt/public/Billie/third.webp')
+    ArtistUrl.artistMainimg('/Billie/main.webp')
+    ArtistUrl.artistSecimg('/Billie/sec.webp')
+    ArtistUrl.artistThirdimg('/Billie/third.webp')
   }
 
 
