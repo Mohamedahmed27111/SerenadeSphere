@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   ssr:false,
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en' // Set the default language attribute for all pages
+      },
       title: 'Serenade Sphere',
       meta: [
         { charset: 'utf-8' },
