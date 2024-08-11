@@ -3,7 +3,7 @@
     <div class="card bg-G rounded">
       <div class="artist-hero flex  mb-5 flex-col lg:flex-row ">
         <div class="artist-img  flex items-center lg:w-2/4 ">
-          <img :src="Artist.imgMain" alt="artist" class=" shadow rounded-md p-5 ">
+          <img :src="Artist.imgMain" alt="artist" class=" shadow rounded-md p-5 " loading="lazy">
         </div>
         <div class="artist-body p-5 ">
           <a :href="Link" target="_blank">

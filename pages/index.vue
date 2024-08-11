@@ -4,7 +4,7 @@
                       <NuxtLink to="/artist" >
                       <div @click="TheWeeknd" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
-                         <img src="/TheWeeknd/main.webp" alt="" class="w-full   ">
+                         <img src="/TheWeeknd/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">The Weeknd</h1>
@@ -16,7 +16,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="TravisScott" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
-                         <img src="/travis/main.webp" alt="" class="w-full   ">
+                         <img src="/travis/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Travis Scott</h1>
@@ -28,7 +28,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="LanaDelRey" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden   ">
-                         <img src="/LanaDelRey/main.webp" alt="" class="w-full   ">
+                         <img src="/LanaDelRey/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Lana Del Rey</h1>
@@ -41,7 +41,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Metro" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center overflow-hidden  ">
-                         <img src="/metro/main.webp" alt="" class="w-full   ">
+                         <img src="/metro/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Metro Boomin </h1>
@@ -54,7 +54,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Future" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center   overflow-hidden ">
-                         <img src="/Future/main.webp " alt="" class="w-full  object-top ">
+                         <img src="/Future/main.webp " alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Future</h1>
@@ -69,7 +69,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="Billie" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
-                         <img src="/Billie/main.webp" alt="" class="w-full   ">
+                         <img src="/Billie/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Billie Eilish</h1>
@@ -81,7 +81,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="sza" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
-                         <img src="/sza/main.webp" alt="" class="w-full   ">
+                         <img src="/sza/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">SZA</h1>
@@ -93,7 +93,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="ye" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
-                         <img src="/ye/main.webp" alt="" class="w-full   ">
+                         <img src="/ye/main.webp" alt="" class="w-full" loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Kanye West</h1>
@@ -107,7 +107,7 @@
                   <NuxtLink to="/artist" >
                       <div @click="clairo" class="main-card card rounded  flex items-center justify-start sm:mt-11 mt-4 h-40 bg-G ">
                       <div class="main-img w-3/6 h-full flex items-center  overflow-hidden   ">
-                         <img src="/Clairo/main.webp" alt="" class="w-full   ">
+                         <img src="/Clairo/main.webp" alt="" class="w-full " loading="lazy">
                       </div>
                       <div class="main-body ml-4">
                          <h1 class="text-P-2 font-extrabold sm:text-2xl text-xl">Clairo</h1>

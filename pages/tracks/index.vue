@@ -13,7 +13,7 @@
         <div v-for="T in track" :key="T" >
           <div class="card bg-B-2 text-center rounded h-full flex flex-col justify-between items-center px-5 py-7">
             <div class="album-img rounded">
-              <img :src="Artist.imgThird" alt="" class="p-1">
+              <img :src="Artist.imgThird" alt="" class="p-1" loading="lazy">
             </div>
             <div class="album-body">
               <h2 class="text-G font-bold text-lg">{{ T.name }}</h2>
