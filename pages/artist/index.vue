@@ -8,7 +8,7 @@
         <div class="artist-body p-5 ">
           <a :href="Link" target="_blank">
             <h1
-              class="text-white   font-bold hover:text-B-2 duration-200 text-center text-3xl sm:text-4xl md:text-5xl lg:text-left ">
+              class="text-white   font-bold hover:text-P-1 duration-200 text-center text-3xl sm:text-4xl md:text-5xl lg:text-left ">
               {{ name }} </h1>
           </a>
           <ul

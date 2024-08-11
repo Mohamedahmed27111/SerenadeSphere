@@ -10,7 +10,7 @@ theme: {
   extend: {
     colors:{
       P:{
-        1:'#66FCF1',
+        1:'#006e6b',
         2:'#45A29E'
       },
       B:{
