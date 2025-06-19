@@ -1,49 +1,60 @@
+//Artist Profile Page
 <template>
-  <div class="container m-auto px-5">
-    <div class="card bg-G rounded">
-      <div class="artist-hero flex  mb-5 flex-col lg:flex-row ">
-        <div class="artist-img  flex items-center lg:w-2/4 ">
-          <img :src="Artist.imgMain" alt="artist" class=" shadow rounded-md p-5 " loading="lazy">
-        </div>
-        <div class="artist-body p-5 ">
-          <a :href="Link" target="_blank">
-            <h1
-              class="text-white   font-bold hover:text-P-1 duration-200 text-center text-3xl sm:text-4xl md:text-5xl lg:text-left ">
-              {{ name }} </h1>
-          </a>
-          <ul
-            class="font-semibold my-5 flex  justify-between items-center uppercase text-P-2  flex-col gap-2  md:text-lg lg:flex-row lg:gap-6  ">
-            <li>
-              <h2>listeners: <span>{{ statsL }}</span></h2>
-            </li>
-            <li>
-              <h2>playcount: <span>{{ statsP }}</span></h2>
-            </li>
-          </ul>
-
-          <div class="flex lg:flex-col lg:justify-start   mt-20 gap-5 justify-center sm:gap-10 lg:gap-24">
-            <NuxtLink to="/albums/">
-              <h1 class="artist"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>Top Albums</h1>
-            </NuxtLink>
-            <NuxtLink to="/tracks/">
-              <h1 class="artist"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>Top Tracks</h1>
-            </NuxtLink>
+  <div class="container mx-auto px-4 py-8">
+    <div class="artist-profile">
+      <!-- Header Section -->
+      <div class="profile-header">
+        <div class="avatar-section">
+          <div class="avatar-wrapper">
+            <img :src="Artist.imgMain" alt="artist" class="artist-avatar" loading="lazy">
           </div>
-
         </div>
-
+        
+        <div class="info-section">
+          <a :href="Link" target="_blank" class="artist-name-link">
+            <h1 class="artist-name">{{ name }}</h1>
+          </a>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">{{ statsL }}</div>
+              <div class="stat-label">Monthly Listeners</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">{{ statsP }}</div>
+              <div class="stat-label">Total Plays</div>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- Actions Section -->
+      <div class="actions-section">
+        <NuxtLink to="/albums/" class="action-button albums-btn">
+          <div class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div class="btn-content">
+            <span class="btn-title">Albums</span>
+            <span class="btn-subtitle">Explore discography</span>
+          </div>
+        </NuxtLink>
 
-
-
-
+        <NuxtLink to="/tracks/" class="action-button tracks-btn">
+          <div class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+          </div>
+          <div class="btn-content">
+            <span class="btn-title">Top Tracks</span>
+            <span class="btn-subtitle">Most popular songs</span>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -55,18 +66,12 @@ import { useArtistURL } from '~/stores/artist';
 
 const Artist = useArtistURL()
 
-
-
-
-
 const artist = ref(null)
 const name = ref(null)
 const Link = ref(null)
 const statsL = ref(null)
 const statsP = ref(null)
 const url = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${Artist.Artist}&api_key=bf7b6cd9aab2d42882e143f93a094948&format=json`
-
-
 
 axios.get(url)
   .then(function (response) {
@@ -76,14 +81,12 @@ axios.get(url)
     statsL.value = formatNumber(response.data.artist.stats.listeners)
     statsP.value = formatNumber(response.data.artist.stats.playcount)
     function formatNumber(num) {
-
       if (num >= 1000000) {
         return (num / 1000000).toFixed(1) + 'M';
       } else if (num >= 1000) {
         return (num / 1000).toFixed(1) + 'K';
       }
       return num.toString();
-
     }
   })
   .catch(function (error) {
@@ -93,19 +96,209 @@ axios.get(url)
   .finally(function () {
     // always executed
   });
-
-
-
-
-
-
-
-
-
 </script>
 
 <style scoped>
-span {
-  @apply text-B-2
+.container {
+  max-width: 800px;
+}
+
+.artist-profile {
+  background: #0a0a0a;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-header {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+}
+
+.avatar-section {
+  margin-bottom: 24px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.artist-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.info-section {
+  width: 100%;
+}
+
+.artist-name-link {
+  text-decoration: none;
+}
+
+.artist-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.artist-name-link:hover .artist-name {
+  color: #8b5cf6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.actions-section {
+  padding: 32px 40px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.albums-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.tracks-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  color: white;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.btn-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 32px 24px;
+  }
+
+  .artist-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .artist-name {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .actions-section {
+    padding: 24px;
+  }
+
+  .action-button {
+    padding: 16px 20px;
+  }
+
+  .btn-title {
+    font-size: 1rem;
+  }
+
+  .btn-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-name {
+    font-size: 1.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
 }
 </style>
